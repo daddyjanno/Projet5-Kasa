@@ -1,5 +1,6 @@
 import { Outlet } from "react-router";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 function MainLyout() {
   return (
@@ -8,6 +9,7 @@ function MainLyout() {
       <main>
         <Outlet />
       </main>
+      <Footer />
     </>
   );
 }
