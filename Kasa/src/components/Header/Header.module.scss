@@ -1,0 +1,29 @@
+@import "../../style/utils/colors.scss";
+
+.mainLogo {
+  height: 70px;
+  width: 210px;
+}
+
+.nav {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 35px;
+  width: 300px;
+  gap: 60px;
+  background-color: aqua;
+}
+
+.navLink {
+  color: $colour-primary;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 400;
+  &:hover {
+    cursor: pointer;
+  }
+  &.active {
+    text-decoration: underline;
+  }
+}
