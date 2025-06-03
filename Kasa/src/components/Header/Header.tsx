@@ -6,25 +6,32 @@ import styles from "./Header.module.scss";
 class Header extends Component {
   render(): ReactNode {
     return (
-      <nav className="Header">
-        <img src={logo} alt="logo Kasa" id="mainLogo" />
-        <NavLink
-          to={"/"}
-          className={({ isActive, isPending }) =>
-            isActive ? "active" : isPending ? "pending" : ""
-          }
-        >
-          Accueil
-        </NavLink>
-        <NavLink
-          to={"about"}
-          className={({ isActive, isPending }) =>
-            isActive ? "active" : isPending ? "pending" : ""
-          }
-        >
-          A propos
-        </NavLink>
-      </nav>
+      <header className={styles.header}>
+        <img
+          src={logo}
+          alt="logo Kasa"
+          id="mainLogo"
+          className={styles.mainLogo}
+        />
+        <nav className={styles.nav}>
+          <NavLink
+            to={"/"}
+            className={({ isActive }) =>
+              `${styles.navLink}${isActive ? " active" : ""}`
+            }
+          >
+            Accueil
+          </NavLink>
+          <NavLink
+            to={"about"}
+            className={({ isActive }) =>
+              `${styles.navLink}${isActive ? " active" : ""}`
+            }
+          >
+            A propos
+          </NavLink>
+        </nav>
+      </header>
     );
   }
 }
