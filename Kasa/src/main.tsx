@@ -5,6 +5,7 @@ import ErrorPage from "./pages/ErrorPage";
 import About from "./pages/About";
 import React from "react";
 import MainLyout from "./layouts/MainLayout";
+import "./global.scss";
 
 const router = createBrowserRouter([
   {
