@@ -1,0 +1,47 @@
+@use "../../style/mixin.scss" as mixin;
+
+.card {
+  position: relative;
+  display: flex;
+  justify-content: start;
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 16px;
+  overflow: hidden;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  @include mixin.tablet {
+    width: 100%;
+    max-width: unset;
+    max-height: 250px;
+    aspect-ratio: auto;
+  }
+}
+
+.img {
+  object-fit: cover;
+  object-position: center;
+  height: auto;
+  filter: brightness(0.9) saturate(90%);
+  @include mixin.tablet {
+    width: 100%;
+    object-fit: fill;
+    height: auto;
+  }
+}
+
+.textContainer {
+  position: absolute;
+  left: 10px;
+  bottom: 0px;
+  width: 200px;
+  padding: 10px 20px;
+  overflow: hidden;
+  color: black;
+  filter: drop-shadow(1px 1px 5px #000);
+}
+
+.text {
+  font-size: 18px;
+  color: white;
+}
