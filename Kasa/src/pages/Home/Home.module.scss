@@ -1,0 +1,35 @@
+@use "../../style/mixin.scss" as mixin;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+  width: 90%;
+}
+
+.cardWrapper {
+  display: grid;
+  align-items: center;
+  grid-row-gap: 50px;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  width: 100%;
+  margin: 25px auto;
+  background-color: mixin.$colour-tertiary;
+  padding: 25px;
+  border-radius: 16px;
+  justify-items: center;
+
+  @include mixin.tablet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: transparent;
+    width: 100%;
+    margin: 0px;
+    padding: 30px 0px;
+  }
+}
