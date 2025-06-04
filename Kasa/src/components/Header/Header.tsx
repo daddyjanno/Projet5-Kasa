@@ -17,7 +17,7 @@ class Header extends Component {
           <NavLink
             to={"/"}
             className={({ isActive }) =>
-              `${styles.navLink}${isActive ? " active" : ""}`
+              `${styles.navLink} ${isActive ? styles.active : ""}`
             }
           >
             Accueil
@@ -25,7 +25,7 @@ class Header extends Component {
           <NavLink
             to={"about"}
             className={({ isActive }) =>
-              `${styles.navLink}${isActive ? " active" : ""}`
+              `${styles.navLink} ${isActive ? styles.active : ""}`
             }
           >
             A propos
