@@ -1,18 +1,16 @@
 import styles from "./Banner.module.scss";
 
-interface Props {
+interface IBanner {
   src: string;
   text: string;
 }
 
-function Banner(props: Props) {
-  const { src, text } = props;
-
+function Banner(banner: IBanner) {
   return (
     <div className={styles.container}>
-      <p className={styles.text}>{text}</p>
+      <p className={styles.text}>{banner.text}</p>
       <div className={styles.imageContainer}>
-        <img src={src} alt="" className={styles.img} />
+        <img src={banner.src} alt="" className={styles.img} />
       </div>
     </div>
   );
