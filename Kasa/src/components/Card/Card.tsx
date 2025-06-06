@@ -10,8 +10,8 @@ function Card(props: Props) {
   return (
     <div className={styles.card}>
       <img className={styles.img} src={cover} alt="cover" />
-      <div className="textContainer">
-        <p>{title}</p>
+      <div className={styles.textContainer}>
+        <p className={styles.text}>{title}</p>
       </div>
     </div>
   );
