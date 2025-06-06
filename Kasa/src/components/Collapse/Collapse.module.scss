@@ -1,0 +1,66 @@
+@use "../../style/mixin.scss" as mixin;
+
+.collapseSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.collapse {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+  height: 50px;
+  background-color: mixin.$colour-primary;
+  padding: 0px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.title {
+  color: white;
+  font-size: 24px;
+  font-weight: 400;
+  @include mixin.tablet {
+    font-size: 13px;
+  }
+}
+
+.textContainer {
+  background-color: mixi.$colour-tertiary;
+  color: mixin.$colour-primary;
+  z-index: -1;
+  border-radius: 0px 0px 10px 10px;
+  overflow: hidden;
+  padding: 10px 20px 5px 20px;
+  transform-origin: top;
+  transition: all 0.4s ease-in-out;
+
+  @include mixin.tablet {
+    padding: 8px 10px 8px 10px;
+    font-size: 12px;
+  }
+}
+
+.chevron {
+  height: 30px;
+  cursor: pointer;
+  transform: rotate(180deg);
+  transition: all 0.4s ease-in-out both alternate;
+
+  &.open {
+    transform: rotate(360deg);
+  }
+
+  @include mixin.tablet {
+    height: 20px;
+  }
+}
+
+.collpaseLi {
+  list-style: none;
+}
+
+.collapseUl {
+  padding-left: 10px;
+}
