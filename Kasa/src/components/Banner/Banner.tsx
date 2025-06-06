@@ -6,7 +6,6 @@ interface Props {
 }
 
 function Banner(props: Props) {
-  console.log(props);
   const { src, text } = props;
 
   return (
