@@ -2,7 +2,7 @@ import styles from "./Banner.module.scss";
 
 interface IBanner {
   src: string;
-  text: string;
+  text?: string;
 }
 
 function Banner(banner: IBanner) {
