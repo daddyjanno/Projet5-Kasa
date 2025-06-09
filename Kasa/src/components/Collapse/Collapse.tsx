@@ -1,50 +1,56 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./Collapse.module.scss";
-import chevronDown from "../../assets/chevron-down.svg";
+import chevronDown from "../../assets/chevron-down-solid.png";
 
 interface ICollapse {
   title: string;
   text: string | string[];
 }
 
-function Collapse(collapse: ICollapse) {
-  const { title, text } = collapse;
+function Collapse({ title, text }: ICollapse) {
   const [open, setOpen] = useState(false);
+
   const [height, setHeight] = useState("0px"); // height of the content
   const [margin, setMargin] = useState("-15px");
 
-  const contentCollapse = useRef<HTMLDivElement | null>(null);
+  const contentRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (contentRef.current !== null) {
+      setHeight(open ? `${contentRef.current.scrollHeight}px` : "0px");
+      setMargin(open ? "-10px" : "-15px");
+    }
+  }, [open]);
 
   const toggleCollapse = () => {
-    setOpen(!open);
-    if (contentCollapse.current !== null) {
-      setHeight(open ? "0px" : `${contentCollapse.current.scrollHeight}px`);
-    }
-    setMargin(open ? "-15px" : "-10px");
+    setOpen((prev) => !prev);
   };
 
   return (
     <section className={styles.collapseSection}>
-      <div className={styles.collapse} onClick={toggleCollapse}>
+      <button
+        className={styles.collapse}
+        onClick={toggleCollapse}
+        aria-expanded={open}
+        aria-controls="collapse-content"
+      >
         <h4 className={styles.title}>{title}</h4>
-        <img className={styles.chevron} src={chevronDown} data-open={open} />
-      </div>
-      {typeof text === "string" ? (
-        <div
-          className={styles.textContainer}
+        <img
+          className={`${styles.chevron} ${open ? styles.open : ""}`}
+          src={chevronDown}
           data-open={open}
-          ref={contentCollapse}
-          style={{ maxHeight: height, marginTop: margin }}
-        >
+        />
+      </button>
+      <div
+        id="collapse-content"
+        className={styles.textContainer}
+        ref={contentRef}
+        style={{ maxHeight: height, marginTop: margin }}
+        aria-hidden={!open}
+      >
+        {typeof text === "string" ? (
           <p>{text}</p>
-        </div>
-      ) : (
-        <div
-          className={styles.textContainer}
-          data-open={open}
-          ref={contentCollapse}
-          style={{ maxHeight: `${height}`, marginTop: `${margin}` }}
-        >
+        ) : (
           <ul className={styles.collapseUl}>
             {text.map((item, index) => (
               <li key={index} className={styles.collapseLi}>
@@ -52,8 +58,8 @@ function Collapse(collapse: ICollapse) {
               </li>
             ))}
           </ul>
-        </div>
-      )}
+        )}
+      </div>
     </section>
   );
 }

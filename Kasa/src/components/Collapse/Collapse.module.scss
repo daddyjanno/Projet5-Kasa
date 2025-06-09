@@ -14,6 +14,7 @@
   background-color: mixin.$colour-primary;
   padding: 0px 15px;
   border-radius: 10px;
+  border: none;
   cursor: pointer;
 }
 
@@ -27,7 +28,7 @@
 }
 
 .textContainer {
-  background-color: mixi.$colour-tertiary;
+  background-color: mixin.$colour-tertiary;
   color: mixin.$colour-primary;
   z-index: -1;
   border-radius: 0px 0px 10px 10px;
@@ -48,13 +49,13 @@
   transform: rotate(180deg);
   transition: all 0.4s ease-in-out both alternate;
 
-  &.open {
-    transform: rotate(360deg);
-  }
-
   @include mixin.tablet {
     height: 20px;
   }
+}
+
+.open {
+  transform: rotate(360deg);
 }
 
 .collpaseLi {
