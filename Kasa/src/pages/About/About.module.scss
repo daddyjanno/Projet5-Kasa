@@ -1,0 +1,24 @@
+@use "../../style/mixin.scss" as mixin;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  gap: 30px;
+  margin: 50px auto;
+
+  @include mixin.tablet {
+    gap: 16px;
+    margin: 30px auto;
+  }
+}
+
+.wrapper {
+  width: 80%;
+  height: auto;
+  @include mixin.tablet {
+    width: 100%;
+  }
+}
