@@ -1,0 +1,46 @@
+@use "../../style/mixin.scss" as mixin;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  height: calc(100vh - 13em - 4.25em - 100px);
+  color: mixin.$colour-primary;
+  margin: 50px 0px;
+
+  @include mixin.tablet {
+    width: 80%;
+    margin: 50px auto;
+    gap: 0px;
+  }
+}
+
+.title {
+  font-size: 288px;
+  font-weight: 700;
+  margin: 0;
+  @include mixin.tablet {
+    font-size: 96px;
+  }
+}
+
+.text {
+  text-align: center;
+  font-weight: 500;
+  font-size: 36px;
+  @include mixin.tablet {
+    font-size: 18px;
+  }
+}
+
+.link {
+  text-decoration: underline;
+  color: black;
+  font-weight: 500;
+  font-size: 18px;
+  @include mixin.tablet {
+    font-size: 14px;
+  }
+}
