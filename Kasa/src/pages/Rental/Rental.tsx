@@ -1,12 +1,21 @@
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
+import rentalsList from "../../datas/logements.json";
 
 function Rental() {
-  const { id } = useParams();
-  return (
+  const rentalId = useParams();
+  const { id } = rentalId;
+  const data = rentalsList.find((el) => el.id === id);
+  return data ? (
     <>
       <h1>Rental page</h1>
-      <p>id: {id}</p>
+      {Object.entries(data).map(([key, value]) => (
+        <p key={key}>
+          {key}: {String(value)}
+        </p>
+      ))}
     </>
+  ) : (
+    <Navigate to="/error" />
   );
 }
 
