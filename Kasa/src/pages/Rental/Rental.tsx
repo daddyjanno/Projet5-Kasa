@@ -1,19 +1,16 @@
 import { Navigate, useParams } from "react-router-dom";
 import rentalsList from "../../datas/logements.json";
+import styles from "./Rental.module.scss";
+import Slideshow from "../../components/Slideshow/Slideshow";
 
 function Rental() {
   const rentalId = useParams();
   const { id } = rentalId;
   const data = rentalsList.find((el) => el.id === id);
   return data ? (
-    <>
-      <h1>Rental page</h1>
-      {Object.entries(data).map(([key, value]) => (
-        <p key={key}>
-          {key}: {String(value)}
-        </p>
-      ))}
-    </>
+    <div className={styles.container}>
+      <Slideshow pictures={data.pictures} />
+    </div>
   ) : (
     <Navigate to="/error" />
   );
