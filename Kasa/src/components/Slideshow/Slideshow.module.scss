@@ -26,6 +26,7 @@
   cursor: pointer;
   border-radius: 50%;
   filter: drop-shadow(0px 0px 2px #000);
+  visibility: hidden;
 }
 
 .rightArrow {
@@ -36,6 +37,7 @@
   cursor: pointer;
   border-radius: 50%;
   filter: drop-shadow(0px 0px 5px #000);
+  visibility: hidden;
 }
 
 .indicator {
@@ -46,6 +48,7 @@
   border: none;
   outline: none;
   filter: drop-shadow(0px 0px 5px #000);
+  visibility: hidden;
 }
 
 .slide {
@@ -56,4 +59,8 @@
     min-height: 255px;
     aspect-ratio: inherit;
   }
+}
+
+.visible {
+  visibility: visible;
 }

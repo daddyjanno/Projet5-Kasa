@@ -9,6 +9,7 @@ interface ISlideshow {
 
 function Slideshow({ pictures }: ISlideshow) {
   const [index, setIndex] = useState(0);
+  const showSpan = pictures.length > 1;
   const isFirstSlide = index === 0;
   const isLastSlide = index === pictures.length - 1;
 
@@ -33,15 +34,17 @@ function Slideshow({ pictures }: ISlideshow) {
       <img
         src={arrowLeft}
         alt="left arrow"
-        className={styles.leftArrow}
+        className={`${styles.leftArrow} ${showSpan && styles.visible}`}
         onClick={handleLeft}
       />
       <img src={pictures[index]} alt="slideshow" className={styles.slide} />
-      <span className={styles.indicator}></span>
+      <span className={`${styles.indicator} ${showSpan && styles.visible}`}>
+        {index + 1}/{pictures.length}
+      </span>
       <img
         src={arrowRight}
         alt="right arrow"
-        className={styles.rightArrow}
+        className={`${styles.rightArrow} ${showSpan && styles.visible}`}
         onClick={handleRight}
       />
     </div>
