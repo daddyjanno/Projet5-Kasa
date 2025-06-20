@@ -10,6 +10,11 @@ function Rental() {
   return data ? (
     <div className={styles.container}>
       <Slideshow pictures={data.pictures} />
+      <div className={styles.informations}>
+        <div className={styles.titleContainer}>
+          <h2 className={styles.title}>{data.title}</h2>
+        </div>
+      </div>
     </div>
   ) : (
     <Navigate to="/error" />

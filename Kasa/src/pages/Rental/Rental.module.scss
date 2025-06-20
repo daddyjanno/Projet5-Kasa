@@ -8,3 +8,33 @@
   width: 90%;
   margin: 20px auto;
 }
+
+.informations {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px 0px;
+  gap: 30px;
+  @include mixin.tablet {
+    flex-direction: column;
+  }
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 400;
+  color: mixin.$colour-primary;
+  margin: 0px;
+  @include mixin.tablet {
+    font-size: 18px;
+  }
+}
