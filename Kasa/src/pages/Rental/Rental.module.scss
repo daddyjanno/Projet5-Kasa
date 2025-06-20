@@ -38,3 +38,13 @@
     font-size: 18px;
   }
 }
+
+.location {
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+  margin: 0px;
+  @include mixin.tablet {
+    font-size: 14px;
+  }
+}

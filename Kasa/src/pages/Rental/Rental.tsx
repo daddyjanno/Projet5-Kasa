@@ -13,6 +13,7 @@ function Rental() {
       <div className={styles.informations}>
         <div className={styles.titleContainer}>
           <h2 className={styles.title}>{data.title}</h2>
+          <h3 className={styles.location}>{data.location}</h3>
         </div>
       </div>
     </div>
