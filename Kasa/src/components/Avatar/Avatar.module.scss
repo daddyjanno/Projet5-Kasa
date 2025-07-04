@@ -1,0 +1,27 @@
+@use "../../style/mixin.scss" as mixin;
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 130px;
+  gap: 10px;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: 400;
+  color: mixin.$colour-primary;
+  text-align: end;
+  margin: 0px;
+}
+
+.picture {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  @include mixin.tablet {
+    width: 32px;
+    height: 32px;
+  }
+}
