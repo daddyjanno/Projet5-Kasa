@@ -1,9 +1,9 @@
-import styles from "./Avatar.module.scss";
+import styles from "./Rating.module.scss";
 import StarPlain from "../../assets/Star-plain.png";
 import StarFill from "../../assets/Star-fill.png";
 
 interface IRating {
-  stars: number;
+  stars: string;
 }
 
 function Rating({ stars }: IRating) {
@@ -11,15 +11,17 @@ function Rating({ stars }: IRating) {
   return (
     <div className={styles.container}>
       {ratingArray.map((level, index) =>
-        stars >= level ? (
+        +stars >= level ? (
           <img
             src={StarPlain}
+            className={styles.stars}
             alt="Rating star filled"
             key={`${index} - ${level}`}
           />
         ) : (
           <img
             src={StarFill}
+            className={styles.stars}
             alt="Rating star filled"
             key={`${index} - ${level}`}
           />
