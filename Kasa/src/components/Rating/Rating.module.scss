@@ -1,0 +1,11 @@
+@use "../../style/mixin.scss" as mixin;
+
+.container {
+  display: flex;
+  gap: 8px;
+}
+
+.stars {
+  width: 20px;
+  height: 20px;
+}
