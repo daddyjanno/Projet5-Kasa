@@ -5,6 +5,7 @@ import Slideshow from "../../components/Slideshow/Slideshow";
 import Tag from "../../components/Tag/Tag";
 import Avatar from "../../components/Avatar/Avatar";
 import Rating from "../../components/Rating/Rating";
+import Collapse from "../../components/Collapse/Collapse";
 
 function Rental() {
   const rentalId = useParams();
@@ -28,6 +29,14 @@ function Rental() {
             <Avatar host={data.host} />
           </div>
           <Rating stars={data.rating} />
+        </div>
+      </div>
+      <div className={styles.collapseContainer}>
+        <div className={styles.collapseWrapper}>
+          <Collapse title={"Description"} text={data.description} />
+        </div>
+        <div className={styles.collapseWrapper}>
+          <Collapse title={"Equipements"} text={data.equipments} />
         </div>
       </div>
     </div>

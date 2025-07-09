@@ -83,3 +83,22 @@
   justify-content: flex-start;
   margin: 0px;
 }
+
+.collapseContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  gap: 30px;
+  margin-bottom: 20px;
+  @include mixin.tablet {
+    flex-direction: column;
+  }
+}
+
+.collapseWrapper {
+  width: 45%;
+  @include mixin.tablet {
+    width: 100%;
+  }
+}
