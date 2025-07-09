@@ -4,6 +4,7 @@ import styles from "./Rental.module.scss";
 import Slideshow from "../../components/Slideshow/Slideshow";
 import Tag from "../../components/Tag/Tag";
 import Avatar from "../../components/Avatar/Avatar";
+import Rating from "../../components/Rating/Rating";
 
 function Rental() {
   const rentalId = useParams();
@@ -26,6 +27,7 @@ function Rental() {
           <div className={styles.avatarContainer}>
             <Avatar host={data.host} />
           </div>
+          <Rating stars={data.rating} />
         </div>
       </div>
     </div>
