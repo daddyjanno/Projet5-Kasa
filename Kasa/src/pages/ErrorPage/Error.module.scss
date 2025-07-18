@@ -6,7 +6,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 50px;
-  height: calc(100vh - 13em - 4.25em - 100px);
+  min-height: mixin.$minHeight;
   color: mixin.$colour-primary;
   margin: 50px 0px;
 
