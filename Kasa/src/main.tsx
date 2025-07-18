@@ -4,14 +4,14 @@ import Home from "./pages/Home/Home";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import About from "./pages/About/About";
 import React from "react";
-import MainLyout from "./layouts/MainLayout";
+import MainLayout from "./layouts/MainLayout";
 import "./style/global.scss";
 import Rental from "./pages/Rental/Rental";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <MainLyout />,
+    element: <MainLayout />,
     errorElement: <ErrorPage />,
     children: [
       {
