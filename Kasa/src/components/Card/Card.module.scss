@@ -4,16 +4,16 @@
   position: relative;
   display: flex;
   justify-content: start;
-  max-width: 300px;
-  max-height: 300px;
-  border-radius: 16px;
+  max-width: 18.75em;
+  max-height: 18.75em;
+  border-radius: 1em;
   overflow: hidden;
   object-fit: cover;
   aspect-ratio: 1/1;
   @include mixin.tablet {
     width: 100%;
     max-width: unset;
-    max-height: 250px;
+    max-height: 15.625em;
     aspect-ratio: auto;
   }
 }
@@ -32,15 +32,15 @@
 
 .textContainer {
   position: absolute;
-  left: 10px;
-  bottom: 10px;
-  width: 200px;
-  padding: 10px 20px;
+  left: 0.625em;
+  bottom: 0.625em;
+  width: 12.5em;
+  padding: 0.625em 1.25em;
   overflow: hidden;
-  filter: drop-shadow(1px 1px 5px #000);
+  filter: drop-shadow(0.063em 0.063em 0.313em #000);
 }
 
 .text {
-  font-size: 18px;
+  font-size: 1.125em;
   color: white;
 }

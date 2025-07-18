@@ -10,15 +10,15 @@ interface ICollapse {
 function Collapse({ title, text }: ICollapse) {
   const [open, setOpen] = useState(false);
 
-  const [height, setHeight] = useState("0px"); // height of the content
-  const [margin, setMargin] = useState("-15px");
+  const [height, setHeight] = useState("0em"); // height of the content
+  const [margin, setMargin] = useState("-0.938em");
 
   const contentRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (contentRef.current !== null) {
-      setHeight(open ? `${contentRef.current.scrollHeight}px` : "0px");
-      setMargin(open ? "-10px" : "-15px");
+      setHeight(open ? `${contentRef.current.scrollHeight}em` : "0em");
+      setMargin(open ? "-0.625em" : "-0.938em");
     }
   }, [open]);
 

@@ -10,20 +10,20 @@
   align-items: center;
   justify-content: space-between;
   max-width: 100%;
-  height: 50px;
+  height: 3.125em;
   background-color: mixin.$colour-primary;
-  padding: 0px 15px;
-  border-radius: 10px;
+  padding: 0 0.938em;
+  border-radius: 0.625em;
   border: none;
   cursor: pointer;
 }
 
 .title {
   color: white;
-  font-size: 24px;
+  font-size: 1.5em;
   font-weight: 400;
   @include mixin.tablet {
-    font-size: 13px;
+    font-size: 0.813em;
   }
 }
 
@@ -31,26 +31,26 @@
   background-color: mixin.$colour-tertiary;
   color: black;
   z-index: -1;
-  border-radius: 0px 0px 10px 10px;
+  border-radius: 0 0 0.625em 0.625em;
   overflow: hidden;
-  padding: 10px 20px 5px 20px;
+  padding: 0.625em 1.25em 0.313em 1.25em;
   transform-origin: top;
   transition: all 0.4s ease-in-out;
 
   @include mixin.tablet {
-    padding: 8px 10px 8px 10px;
-    font-size: 12px;
+    padding: 0.5em 0.625em 0.5em 0.625em;
+    font-size: 0.75em;
   }
 }
 
 .chevron {
-  height: 30px;
+  height: 1.875em;
   cursor: pointer;
   transform: rotate(180deg);
   transition: all 0.4s ease-in-out both alternate;
 
   @include mixin.tablet {
-    height: 20px;
+    height: 1.25em;
   }
 }
 
@@ -63,5 +63,5 @@
 }
 
 .collapseUl {
-  padding-left: 10px;
+  padding-left: 0.625em;
 }

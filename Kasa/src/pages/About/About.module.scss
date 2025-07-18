@@ -7,12 +7,12 @@
   justify-content: start;
   width: 90%;
   min-height: mixin.$minHeight;
-  gap: 30px;
-  margin: 50px auto;
+  gap: 1.875em;
+  margin: 3.125em auto;
 
   @include mixin.tablet {
-    gap: 16px;
-    margin: 30px auto;
+    gap: 1em;
+    margin: 1.875em auto;
   }
 }
 

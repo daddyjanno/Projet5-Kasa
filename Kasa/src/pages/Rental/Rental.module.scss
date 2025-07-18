@@ -7,7 +7,7 @@
   align-items: center;
   width: 90%;
   min-height: mixin.$minHeight;
-  margin: 20px auto;
+  margin: 1.25em auto;
 }
 
 .informations {
@@ -15,8 +15,8 @@
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
-  padding: 16px 0px;
-  gap: 30px;
+  padding: 1em 0;
+  gap: 1.875em;
   @include mixin.tablet {
     flex-direction: column;
   }
@@ -31,22 +31,22 @@
 }
 
 .title {
-  font-size: 36px;
+  font-size: 2.25em;
   font-weight: 400;
   color: mixin.$colour-primary;
-  margin: 0px;
+  margin: 0;
   @include mixin.tablet {
-    font-size: 18px;
+    font-size: 1.125em;
   }
 }
 
 .location {
-  font-size: 18px;
+  font-size: 1.125em;
   font-weight: 500;
   color: black;
-  margin: 0px;
+  margin: 0;
   @include mixin.tablet {
-    font-size: 14px;
+    font-size: 0.875em;
   }
 }
 
@@ -55,8 +55,8 @@
   flex-direction: row;
   justify-content: start;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 16px;
+  gap: 0.5em;
+  margin-top: 1em;
   @include mixin.tablet {
     width: 100%;
   }
@@ -67,14 +67,14 @@
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
-  gap: 40px;
+  gap: 2.5em;
   @include mixin.tablet {
     width: 100%;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
-    margin: 10px auto;
-    gap: 0px;
+    margin: 0.625em auto;
+    gap: 0;
   }
 }
 
@@ -82,7 +82,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin: 0px;
+  margin: 0;
 }
 
 .collapseContainer {
@@ -90,8 +90,8 @@
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
-  gap: 30px;
-  margin-bottom: 20px;
+  gap: 1.875em;
+  margin-bottom: 1.25em;
   @include mixin.tablet {
     flex-direction: column;
   }
