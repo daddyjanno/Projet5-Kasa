@@ -6,8 +6,5 @@
   font-size: 0.875em;
   font-weight: 400;
   border-radius: 1em;
-  padding: 0.5em 2.5em;
-  @include mixin.tablet {
-    padding: 0.5em 2.5em;
-  }
+  padding: 0.5em 1em;
 }
