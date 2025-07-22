@@ -50,18 +50,6 @@ Travail en tant que développeur front-end freelance pour Kasa, une entreprise d
 Le front-end sera lancé à l'URL:
 `[http://127.0.0.1:8080/](http://localhost:5173/)`
 
-## Structure du Projet
-
--   `index.html` : Page principale du site
--   `login.html` : Page du formulaire de connection
--   `src/`: Dossier contenant les différentes ressources nécessaires au fonctionnement du site:
-    -   `style.css`: Fichier centralisant tous les imports de ressources css
-    -   `css/`: Dossier contenant les styles CSS des différents layout et composants, ainsi que style.css
-    -   `index.js`: fichier contenant la logique javascript pour la page principale
-    -   `login.js`: fichier contenant la logique javascript de la page de connection
-    -   `js/` : Dossier contenant les fichiers javascript
--   `maquettes/` : Dossier contenant la maquette découpé pour initier la structure du fichier `index.html`.
--   `assets` : Dossier contenant les images du site ainsi que les icones.
 
 ## Développé avec :
 
