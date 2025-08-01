@@ -8,31 +8,37 @@ import MainLayout from "./layouts/MainLayout";
 import "./style/global.scss";
 import Rental from "./pages/Rental/Rental";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+
+      element: <MainLayout />,
+      errorElement: <ErrorPage />,
+      children: [
+        {
+          index: true,
+          element: <Home />,
+        },
+        {
+          path: "about",
+          element: <About />,
+        },
+        {
+          path: "rentals/:id",
+          element: <Rental />,
+        },
+        {
+          path: "*",
+          element: <ErrorPage />,
+        },
+      ],
+    },
+  ],
   {
-    path: "/Projet5-Kasa/",
-    element: <MainLayout />,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        index: true,
-        element: <Home />,
-      },
-      {
-        path: "about",
-        element: <About />,
-      },
-      {
-        path: "rentals/:id",
-        element: <Rental />,
-      },
-      {
-        path: "*",
-        element: <ErrorPage />,
-      },
-    ],
-  },
-]);
+    basename: "/Projet5-Kasa/",
+  }
+);
 
 const root = document.getElementById("root");
 
