@@ -5,10 +5,4 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   base: "/Projet5-Kasa/",
   plugins: [react()],
-  server: {
-    port: 5173,
-    strictPort: true,
-    host: true,
-    open: "/Projet5-Kasa/",
-  },
 });

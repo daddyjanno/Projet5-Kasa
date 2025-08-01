@@ -10,7 +10,7 @@ import Rental from "./pages/Rental/Rental";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/Projet5-Kasa/",
     element: <MainLayout />,
     errorElement: <ErrorPage />,
     children: [

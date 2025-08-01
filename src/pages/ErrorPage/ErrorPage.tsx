@@ -8,7 +8,7 @@ function ErrorPage() {
       <p className={styles.text}>
         Oups! La page que vous demandez n'existe pas.
       </p>
-      <Link className={styles.link} to={"/"}>
+      <Link className={styles.link} to={"/Projet5-Kasa/"}>
         Retourner sur la page d'accueil
       </Link>
     </div>

@@ -6,7 +6,7 @@ import styles from "./Header.module.scss";
 function Header() {
   return (
     <header className={styles.header}>
-      <NavLink to={"/"}>
+      <NavLink to={"/Projet5-Kasa/"}>
         <img
           src={logo}
           alt="logo Kasa"
@@ -16,7 +16,7 @@ function Header() {
       </NavLink>
       <nav className={styles.nav}>
         <NavLink
-          to={"/"}
+          to={"/Projet5-Kasa/"}
           className={({ isActive }) =>
             `${styles.navLink} ${isActive ? styles.active : ""}`
           }
@@ -24,7 +24,7 @@ function Header() {
           Accueil
         </NavLink>
         <NavLink
-          to={"about"}
+          to={"/Projet5-Kasa/about"}
           className={({ isActive }) =>
             `${styles.navLink} ${isActive ? styles.active : ""}`
           }

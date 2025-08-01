@@ -11,7 +11,7 @@ function Home() {
       <Banner src={HomePageBanner} text="Chez vous, partout et ailleurs" />
       <main className={styles.cardWrapper}>
         {rentalsList.map((item) => (
-          <Link key={item.id} to={`/rentals/${item.id}`}>
+          <Link key={item.id} to={`/Projet5-Kasa/rentals/${item.id}`}>
             <Card key={item.id} title={item.title} cover={item.cover}></Card>
           </Link>
         ))}
