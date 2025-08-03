@@ -4,6 +4,9 @@
 
 Travail en tant que développeur front-end freelance pour Kasa, une entreprise de location d’appartements entre particuliers.
 
+
+Le site est déployé sur Github Pages, visible [ici](https://daddyjanno.github.io/Projet5-Kasa/)
+
 ## Technologies Utilisées
 
 -   HTML 5
@@ -24,7 +27,7 @@ Travail en tant que développeur front-end freelance pour Kasa, une entreprise d
 - Si le Collapse est ouvert, le clic de l'utilisateur permet de le fermer.
     - Inversement, si le Collapse est fermé, un clic permet de l'ouvrir.
  
-Le site est déployé sur Github Pages, visible [ici](https://daddyjanno.github.io/Projet5-Kasa/)
+
 
 ## Ressources
 
