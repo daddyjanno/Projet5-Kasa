@@ -23,6 +23,8 @@ Travail en tant que développeur front-end freelance pour Kasa, une entreprise d
 - Collapse : Par défaut, les Collapse sont fermés à l'initialisation de la page.
 - Si le Collapse est ouvert, le clic de l'utilisateur permet de le fermer.
     - Inversement, si le Collapse est fermé, un clic permet de l'ouvrir.
+ 
+Le site est déployé sur Github Pages, visible [ici](https://daddyjanno.github.io/Projet5-Kasa/)
 
 ## Ressources
 
