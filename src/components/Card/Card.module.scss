@@ -8,7 +8,7 @@
   max-height: 18.75em;
   border-radius: 1em;
   overflow: hidden;
-  object-fit: cover;
+  object-fit: fill;
   aspect-ratio: 1/1;
   @include mixin.tablet {
     width: 100%;
@@ -25,7 +25,6 @@
   filter: brightness(0.9) saturate(90%);
   @include mixin.tablet {
     width: 100%;
-    object-fit: fill;
     height: auto;
   }
 }
